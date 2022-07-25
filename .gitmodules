@@ -1,0 +1,4 @@
+[submodule "euterpea"]
+	path = euterpea
+	url = git@github.com:ft/euterpea.git
+	branch = ft/main
