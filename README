@@ -1,0 +1,30 @@
+Music experimentation using Haskell's Euterpea Library
+------------------------------------------------------
+
+After looking  through Haskell School of  Music¹ by Hudak² and Quick³,  I found
+myself playing  a little bit  with the  subject matter again.  Nothing original
+mind you, I am  missing the talent for that sort of endeavour.  I did find some
+sheet music of Avril 14, a song⁴ off  of the 2001 druKQs album⁵ by Aphex Twin⁶,
+however. Unfortunately I can't remember where I  got the sheet. So I can't pro-
+perly attribute the person. I changed a couple of things, but nothing major. If
+you know the song, you'll recognise it I am sure.
+
+To give it a go you need  this repository, and recursively: I adjusted the ori-
+ginal Euterpea code  to play nice with modern Cabal  installations. Then on the
+top-level there  is stack setup to  orchestrate everything. You'll also  need a
+synthesizer on  your system to perform  the actual playback. On  Linux systems,
+‘fluidsynth’ works.
+
+With that in mind, here's a quick-start:
+
+    % fluidsynth &
+    % git clone --recursive https://github.com/ft/music
+    % cd music
+    % stack run
+
+¹ https://doi.org/10.1017/9781108241861
+² https://en.wikipedia.org/wiki/Paul_Hudak
+³ https://www.donyaquick.com
+⁴ https://en.wikipedia.org/wiki/Avril_14th
+⁵ https://en.wikipedia.org/wiki/Drukqs
+⁶ https://en.wikipedia.org/wiki/Aphex_Twin
