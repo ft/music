@@ -110,9 +110,13 @@ leftLineH = df 2 en :+: af 2 en :+: c  3 en :+: f  3 en
         :+: af 1 en :+: af 2 en :+: af 4 en
         :+: ef 3 (9/8 :: Rational)
 
+intro :: Music Pitch
+intro = line [ rightPause, rightPause ]
+    :=: line [ leftLineA,  leftLineA  ]
+
 partA :: Music Pitch
-partA = line [ rightPause, rightPause, rightLineA, rightLineA, rightLineB, rightLineB ]
-    :=: line [ leftLineA,  leftLineA,  leftLineA,  leftLineA,  leftLineA,  leftLineA  ]
+partA = line [ rightLineA, rightLineA, rightLineB, rightLineB ]
+    :=: line [ leftLineA,  leftLineA,  leftLineA,  leftLineA  ]
 
 partB :: Music Pitch
 partB = line [ rightLineC, rightLineD, rightLineC, rightLineD, rightLineC, rightLineD, rightLineC, rightLineD ]
@@ -132,7 +136,7 @@ partE = line [ rightLineI, rightLineJ ]
 
 avril14 =
   pace $ instrument AcousticGrandPiano $ line [
-    hnr,
+    intro,
     partA,
     partB,
     partC,
